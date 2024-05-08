@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First-app</title>
+    <script src="angular.min.js"></script>
+
+
+</head>
+
+<body ng-app="">
+    <div
+        ng-init="name='Muhammad Ahmed Raza';age=19 ; address='Karachi'; fee = 7000; modules = ['git','xml','pjs','php','laravell']">
+
+       <h1>Welcome {{name}} !</h1> 
+       <h3>{{name}} age is {{age}}</h3> 
+       <h3>{{name}} lives in {{address}}</h3> 
+       <h3>{{name}} monthly fee  is {{fee}}</h3> 
+
+       <!-- loop -->
+       <h2>modules od 2nd semester</h2>
+<ul ng-repeat="module in modules">
+    <li>
+        {{module}}
+    </li>
+
+</ul>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
