@@ -1,14 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../angular.min.js"></script>
-</head>
-<body ng-app="">
-    <h2>Cal</h2>
-    
-</body>
+  </head>
+  <body ng-app="">
+    <div class="px-6 py-4 w-full mx-auto">
+      <div class="mb-5">
+        <!-- weight / (height * height) -->
+        <h2 class="text-xl font-semibold">Calculate Bmi</h2>
+        <div class="mb-3">
+          <p>Weight</p>
+          <input
+            type="number"
+            ng-model="weight"
+            placeholder="weight in kg"
+            class="rounded outline-none border border-2 border-[#dddddd]"
+          />
+        </div>
+        <div class="mb-3">
+          <p>Height</p>
+          <input
+            type="number"
+            ng-model="height"
+            placeholder="height in meters"
+            class="rounded outline-none border border-2 border-[#dddddd]"
+          />
+        </div>
+        <p class="text-md font-semibold">
+          Your Bmi is {{weight/(height*height)}}
+        </p>
+      </div>
+      <!--  -->
+      <div class="mb-5">
+        <!-- SI = P * R * T / 100 -->
+        <h2 class="text-xl font-semibold">simple Interest</h2>
+        <div class="mb-3">
+          <p>Amount</p>
+          <input
+            type="number"
+            ng-model="amount"
+            placeholder="amount"
+            class="rounded outline-none border border-2 border-[#dddddd]"
+          />
+        </div>
+        <div class="mb-3">
+          <p>Rate</p>
+          <input
+            type="number"
+            ng-model="rate"
+            placeholder="rate"
+            class="rounded outline-none border border-2 border-[#dddddd]"
+          />
+        </div>
+        <div class="mb-3">
+          <p>Time</p>
+          <input
+            type="number"
+            ng-model="time"
+            placeholder="time in years"
+            class="rounded outline-none border border-2 border-[#dddddd]"
+          />
+        </div>
+        <p class="text-md font-semibold">
+          Your simple interest is {{amount*rate*time/100}}
+        </p>
+      </div>
+
+      <!--  -->
+      <div class="mb-5">
+      <h2 class="text-xl font-semibold">
+        how many courses you are going to take this semester, the per course fee
+        is 18000
+      </h2>
+        
+        <div class="mb-3">
+          <p>no of courses</p>
+          <input
+            type="number"
+            ng-model="course"
+            placeholder="Total course"
+            class="rounded outline-none border border-2 border-[#dddddd]"
+          />
+        </div>
+        <p class="text-md font-semibold">Your total amount is {{course * 18000}}</p>
+      </div>
+
+
+
+      <!--  -->
+      <div class="mb-5">
+        <h2 class="text-xl font-semibold">Final velocity</h2>
+          
+          <div class="mb-3">
+            <p>initial velocity</p>
+            <input
+              type="number"
+              ng-model="vi"
+              placeholder="vi"
+              class="rounded outline-none border border-2 border-[#dddddd]"
+            />
+            <p>Time</p>
+            <input
+              type="number"
+              ng-model="time"
+              placeholder="Time"
+              class="rounded outline-none border border-2 border-[#dddddd]"
+            />
+            <p>Acceleration</p>
+            <input
+              type="number"
+              ng-model="acceleration"
+              placeholder="acceleration"
+              class="rounded outline-none border border-2 border-[#dddddd]"
+            />
+          </div>
+          <p class="text-md font-semibold">Your vf is {{vi+time*acceleration}}</p>
+        </div>
+        <input
+        type="number"
+        ng-model="vi"
+        placeholder="vi"
+        class="rounded outline-none border border-2 border-[#dddddd]"
+      />
+    </div>
+  </body>
 </html>
