@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myController">
+    <div id="carouselExample"  class="carousel slide">
+        <div ng-repeat="image in carousalImages">
+
+            <div class="carousel-inner"  >
+              <div class="carousel-item active">
+                <img src={{image}} class="d-block w-100" style="height: 95vh;" alt="...">
+              </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> 
+
+    <div class="container m-5">
+        <h2 class="fw-bold">Top selling Product</h2>
+        <div class="row">
+            <div ng-repeat="product in products" class="col-4">
+                <div class="card ">
+                    <img src={{product.image}} class="w-full card-img-top" height="200px" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">{{product.name | uppercase}}</h5>
+                        <p class="card-text">price: {{product.price}}$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="fw-bold my-3">Compare</h2>
+        <div class="row g-2 mx-auto">
+            <div class="col-6">
+                <select ng-model="shirts">
+                <option value="s1">Polo shirt</option>
+                <option value="s2">printed shirt</option>
+                <option value="s3">Semi formal shirt</option>
+                <option value="s4">formalshirt</option>
+            </select>
+<div  ng-switch="shirts">
+    <div ng-switch-when="s1">
+        <div class="card ">
+            <img src='https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9sbyUyMHNoaXJ0c3xlbnwwfDB8MHx8fDA%3D' class="w-full card-img-top" height="200px" alt="...">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Polo shirt</h5>
+                <p class="card-text">A polo shirt is a classic garment characterized by its short sleeves, a collar, and a buttoned placket at the neckline. </p>
+            </div>
+        </div>
+    </div>
+    <div ng-switch-when="s2">
+        <div class="card ">
+            <img src='data:image/jpeg;base64,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' class="w-full card-img-top" height="200px" alt="...">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Printed shirt</h5>
+                <p class="card-text">A printed shirt features unique designs, patterns, or graphics adorning its fabric. These designs can range from bold</p>
+            </div>
+        </div>
+    </div>
+    <div ng-switch-when="s3">
+        <div class="card ">
+            <img src='https://plus.unsplash.com/premium_photo-1682096340835-022e6647b698?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8U2VtaWZvcm1hbCUyMHNoaXJ0fGVufDB8MHwwfHx8MA%3D%3D' class="w-full card-img-top" height="200px" alt="...">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Semiformal shirt</h5>
+                <p class="card-text">Semi-formal shirts bridge the gap between casual and formal attire, offering a refined yet relaxed look suitable for a range of occasions. </p>
+            </div>
+        </div>
+    </div>
+    <div ng-switch-when="s4">
+        <div class="card ">
+            <img src='https://images.unsplash.com/photo-1602810316693-3667c854239a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9ybWFsJTIwc2hpcnR8ZW58MHwwfDB8fHww' class="w-full card-img-top" height="200px" alt="...">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Formal shirt</h5>
+                <p class="card-text">Formal shirts are distinguished by their crisp, tailored appearance and are designed to be worn on occasions</p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="col-6">
+
+            <select ng-model="pants">
+                <option value="p1">Jeans</option>
+            <option value="p2">denim</option>
+            <option value="p3">Trousers</option>
+            <option value="p4">office</option>
+            </select>
+            <div  ng-switch="pants">
+                <div ng-switch-when="p1">
+                    <div class="card ">
+                        <img src='https://plus.unsplash.com/premium_photo-1682003186729-adaaabd25b94?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8amVhbnN8ZW58MHwwfDB8fHww' class="w-full card-img-top" height="200px" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Jeans</h5>
+                            <p class="card-text">A polo shirt is a classic garment characterized by its short sleeves, a collar, and a buttoned placket at the neckline. </p>
+                        </div>
+                    </div>
+                </div>
+                <div ng-switch-when="p2">
+                    <div class="card ">
+                        <img src="https://images.unsplash.com/photo-1637069585336-827b298fe84a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVuaW18ZW58MHwwfDB8fHww" />
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">denim</h5>
+                            <p class="card-text">A printed shirt features unique designs, patterns, or graphics adorning its fabric. These designs can range from bold</p>
+                        </div>
+                    </div>
+                </div>
+                <div ng-switch-when="p3">
+                    <div class="card ">
+                        <img src='https://images.unsplash.com/photo-1520683111718-ef0a20c6a470?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRyb3VzZXJ8ZW58MHwwfDB8fHww' class="w-full card-img-top" height="200px" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Trousers</h5>
+                            <p class="card-text">Semi-formal shirts bridge the gap between casual and formal attire, offering a refined yet relaxed look suitable for a range of occasions. </p>
+                        </div>
+                    </div>
+                </div>
+                <div ng-switch-when="p4">
+                    <div class="card ">
+                        <img src='https://images.unsplash.com/photo-1602810316693-3667c854239a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9ybWFsJTIwc2hpcnR8ZW58MHwwfDB8fHww' class="w-full card-img-top" height="200px" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">office</h5>
+                            <p class="card-text">Formal shirts are distinguished by their crisp, tailored appearance and are designed to be worn on occasions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--  -->
+
+        
+
+    </div>
+</body>
+
+</html>
