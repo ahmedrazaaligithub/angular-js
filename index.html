@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First-app</title>
-    <script src="angular.min.js"></script>
-
-
+    <title>ANGULAR - ALL WORK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body ng-app="">
-    <div
-        ng-init="name='Muhammad Ahmed Raza';age=19 ; address='Karachi'; fee = 7000; modules = ['git','xml','pjs','php','laravell']">
-
-       <h1>Welcome {{name}} !</h1> 
-       <h3>{{name}} age is {{age}}</h3> 
-       <h3>{{name}} lives in {{address}}</h3> 
-       <h3>{{name}} monthly fee  is {{fee}}</h3> 
-
-       <!-- loop -->
-       <h2>modules od 2nd semester</h2>
-<ul ng-repeat="module in modules">
-    <li>
-        {{module}}
-    </li>
-
-</ul>
-
+    <div class="m-10">
+        <div>
+            <p class="font-semibold text-xl">ClassTasks</p>
+            <ul>
+                <li><a href="./classTask/begining.html">first class</a></li>
+                <li><a href="./classTask/calculator.html">calculator</a></li>
+                <li><a href="./classTask/expenseCalc.html">expenseCalc</a></li>
+                <li><a href="./classTask/switch.html">switch</a></li>
+            </ul>
+        </div>
+    
+        <div>
+            <p class="font-semibold text-xl">Assignment</p>
+            <ul>
+                <li><a href="./assignments/assignment-1.html">first class</a></li>
+                <li><a href="./assignments/assignment-2.html">calculator</a></li>
+                <li><a href="./assignments/assignment2-2.html">expenseCalc</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="font-semibold text-xl">MVC</p>
+            <ul>
+                <li><a href="mvc/mvc-1/index.html">class task-1</a></li>
+                <li><a href="mvc/mvc-2/index.html">landing page class test</a></li>
+                <!-- <li><a href="./assignments/assignment2-2.html">expenseCalc</a></li> -->
+            </ul>
+        </div>
     </div>
-
-
-
-
-
 </body>
-
 </html>
