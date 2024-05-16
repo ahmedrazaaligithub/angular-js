@@ -14,40 +14,47 @@
     <script src="app.js"></script>
 </head>
 
-<body ng-app="myApp" ng-controller="myController">
-    <div id="carouselExample"  class="carousel slide">
-        <div ng-repeat="image in carousalImages">
-
-            <div class="carousel-inner"  >
-              <div class="carousel-item active">
-                <img src={{image}} class="d-block w-100" style="height: 95vh;" alt="...">
-              </div>
+<body >
+    <div ng-app="myApp" ng-controller="myController">
+        
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div ng-repeat="x in carousalImages">
+                    <div class="carousel-item active">
+                        <img src="{{ x }}" class="d-block w-100" alt="...">
+                      </div>
+                </div>
+             
+             
             </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div> 
-
-    <div class="container m-5">
-        <h2 class="fw-bold">Top selling Product</h2>
-        <div class="row">
-            <div ng-repeat="product in products" class="col-4">
-                <div class="card ">
-                    <img src={{product.image}} class="w-full card-img-top" height="200px" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">{{product.name | uppercase}}</h5>
-                        <p class="card-text">price: {{product.price}}$</p>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    
+        <div class="container m-5">
+            <h2 class="fw-bold">Top selling Product</h2>
+            <div class="row">
+                <div ng-repeat="product in products" class="col-4">
+                    <div class="card ">
+                        <img src={{product.image}} class="w-full card-img-top" height="200px" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">{{product.name | uppercase}}</h5>
+                            <p class="card-text">price: {{product.price}}$</p>
+                        </div>
                     </div>
                 </div>
             </div>
+    
+            
+            
+            
         </div>
-
         <h2 class="fw-bold my-3">Compare</h2>
         <div class="row g-2 mx-auto">
             <div class="col-6">
@@ -116,7 +123,7 @@
                 </div>
                 <div ng-switch-when="p2">
                     <div class="card ">
-                        <img src="https://images.unsplash.com/photo-1637069585336-827b298fe84a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVuaW18ZW58MHwwfDB8fHww" />
+                        <img src="https://images.unsplash.com/photo-1637069585336-827b298fe84a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVuaW18ZW58MHwwfDB8fHww" height="200px"  class="w-100"/>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">denim</h5>
                             <p class="card-text">A printed shirt features unique designs, patterns, or graphics adorning its fabric. These designs can range from bold</p>
@@ -134,7 +141,7 @@
                 </div>
                 <div ng-switch-when="p4">
                     <div class="card ">
-                        <img src='https://images.unsplash.com/photo-1602810316693-3667c854239a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9ybWFsJTIwc2hpcnR8ZW58MHwwfDB8fHww' class="w-full card-img-top" height="200px" alt="...">
+                        <img src='https://plus.unsplash.com/premium_photo-1674828601017-2b8d4ea90aca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNsb3RoaW5nfGVufDB8fDB8fHww' class="w-full card-img-top" height="200px" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">office</h5>
                             <p class="card-text">Formal shirts are distinguished by their crisp, tailored appearance and are designed to be worn on occasions</p>
@@ -145,9 +152,6 @@
         </div>
         </div>
         <!--  -->
-
-        
-
     </div>
 </body>
 
