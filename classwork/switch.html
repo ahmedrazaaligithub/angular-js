@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../angular.min.js"></script>
+</head>
+
+<body ng-app="">
+    <div class="p-5">
+        <div class="my-4 flex justify-center">
+            <select ng-model="province" class="outline-none border border-2 border-[#dddddd] ">
+                <option value="">select </option>
+                <option value="sindh">Sindh</option>
+                <option value="punjab">Punjab</option>
+                <option value="kpk">KPK</option>
+                <option value="balochistan">Balochistan</option>
+                <option value="gb">Gitgit baltistan</option>
+            </select>
+        </div>
+        <div ng-switch="province">
+            <div class="w-full flex justify-around items-center" ng-switch-when="sindh">
+    
+    
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]   rounded-t-lg"
+                        src="https://images.unsplash.com/photo-1636671237821-47bd82a8af66?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGthcmFjaGl8ZW58MHwwfDB8fHww"
+                        alt="" />
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Karachi</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+    
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="https://images.unsplash.com/photo-1551161242-b5af797b7233?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHlkZXJhYmFkfGVufDB8MHwwfHx8MA%3D%3D"
+                        alt="" />
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Hyderabad</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="data:image/jpeg;base64,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"
+                        alt="" />
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Larkana</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+    
+            <div class="w-full flex justify-around items-center" ng-switch-when="punjab">
+    
+    
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="https://images.unsplash.com/photo-1622546758596-f1f06ba11f58?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFob3JlfGVufDB8MHwwfHx8MA%3D%3D"
+                        alt="" />
+    
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Lahore</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+    
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="https://www.aboutpakistan.com/blog/wp-content/uploads/2022/09/Faisalabad.jpg" alt="" />
+    
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Faisalabad</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="https://qph.cf2.quoracdn.net/main-qimg-595570ff668e31650fa6bed92b312cc0-lq" alt="" />
+    
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sialkot</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <!--  -->
+            <div class="w-full flex justify-around items-center" ng-switch-when="kpk">
+    
+    
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="https://cdn.britannica.com/02/127002-050-084ED6E6/Islamia-College-Peshawar-Pakistan-North-West-Frontier-Province.jpg"
+                        alt="" />
+    
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Peshawer</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+    
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="https://kpboit.gov.pk/wp-content/uploads/elementor/thumbs/51169304786_eb630eda36_b-pfm0mmccidw360ddqb33q22h201twdk6of5zh545ok.jpg"
+                        alt="" />
+    
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Abbotabad</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg" src="https://www.uoswabi.edu.pk/application/views/themes/modern/images/12.jpg"
+                        alt="" />
+    
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Swabi</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+    
+            <div class="w-full flex justify-around items-center" ng-switch-when="balochistan">
+    
+    
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW6MdpibkvfP0K3m-D46JklLFaG7X8Su-gd7oj472BTg&s"
+                        alt="" />
+    
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Quetta</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+    
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz3WJrzvl7B1V_GBuDtrPHnP8n-OP2LwFcNRVCcx6Xbw&s"
+                        alt="" />
+    
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Gawadar</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2020/12/cover-3-1.jpg" alt="" />
+    
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Khuzdar</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="w-full flex justify-around items-center" ng-switch-when="gb">
+    
+    
+    
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjc91SA71dQQqIwtDh0knmK7EhQO0130FSVclD3vT-KQ&s"
+                        alt="" />
+    
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Gilgit</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+    
+                <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+                    <img class="w-full h-[250px]  rounded-t-lg"
+                        src="https://plus.unsplash.com/premium_photo-1697730198247-ed3c72ecf932?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" />
+    
+                    <div class="p-5">
+    
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">skardu</h5>
+    
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        
+                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+    
+                    </div>
+                </div>
+             
+            </div>
+    <div class="flex justify-center items-center" ng-switch-default="" >
+
+        <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+        <span class="font-medium">please select the city you want</span> 
+      </div>
+
+    </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

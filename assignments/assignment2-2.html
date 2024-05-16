@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../angular.min.js"></script>
+</head>
+<body ng-app="" class="my-5 mx-5" ng-init="aoc='3.14'">
+    <p class="text-xl font-semibold ">Radius</p>
+    
+    <div class="my-4"><p>
+
+        <input type="number" placeholder="radius" ng-model="r" class="outline-none border border-gray ">
+    </p>
+    <br>
+<div>
+    <select
+          ng-model="values"
+          class="outline-none border border-2 border-[#dddddd]"
+        >
+          <option value="">select</option>
+          <option value="1">Area of circle</option>
+          <option value="2">Diameter of circle</option>
+          <option value="3">Circumference of a circle</option>
+          <option value="4">Surface Area of Sphere</option>
+        </select>
+</div>        
+      </div>
+
+<div ng-switch="values">
+    <p ng-switch-when="1" class="font-semibold">Area of circle is {{aoc * r * r}}</p>
+    <p ng-switch-when="2" class="font-semibold">Diameter of circle {{r * 2}}</p>
+    <p ng-switch-when="3" class="font-semibold">Area of circle is {{2 * aoc * r}}</p>
+    <p ng-switch-when="4" class="font-semibold">Surface Area of Sphere {{4 * aoc * r * r}}</p>
+</div>
+
+</body>
+</html>

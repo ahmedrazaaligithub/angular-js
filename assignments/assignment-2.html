@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../angular.min.js"></script>
+  </head>
+
+  <body ng-app="">
+    <div class="p-5">
+      <div class="my-4 flex justify-center">
+        <select
+          ng-model="univercities"
+          class="outline-none border border-2 border-[#dddddd]"
+        >
+          <!-- <option value="">select </option> -->
+          <option value="">select</option>
+          <option value="Private">Private</option>
+          <option value="Government">Government</option>
+          <option value="semi">semi-private</option>
+        </select>
+      </div>
+      <div ng-switch="univercities">
+        <div
+          class="w-full flex flex-wrap gap-2 justify-around items-center"
+          ng-switch-when="Private"
+        >
+          <div
+            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative"
+          >
+            <img
+              class="w-full h-[250px] rounded-t-lg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1QQ3YGzL852eXFk2lWDiUFXDVMMaSlkSMfMufEoTrcA&s"
+              alt=""
+            />
+            <div class="p-5">
+              <p
+                class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1"
+              >
+              Lawrence Bacow
+              </p>
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+              Harvard University
+              </h5>
+              <div
+                class="flex flex-wrap  justify-start gap-2"
+                ng-init="degreiesp1=['Various undergraduate and graduate programs in arts', 'sciences', 'engineering', 'business', 'law', 'medicine', ]"
+              >
+                <div
+                  class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+                  ng-repeat="degree in degreiesp1"
+                >{{degree}}</div>
+              </div>
+              <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+                <i class="fa-solid fa-location-dot"></i> Cambridge, Massachusetts, USA
+              </p>
+            </div>
+          </div>
+
+         <!--  -->
+         <div
+         class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative"
+       >
+         <img
+           class="w-full h-[250px] rounded-t-lg"
+           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0qv0X78mOmJrOleCZ7fFswmyrZfqV-YDlxzpveMb44g&s"
+           alt=""
+         />
+         <div class="p-5">
+           <p
+             class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1"
+           >
+           Persis Drell
+           </p>
+           <h5
+             class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+           >
+           Stanford University
+           </h5>
+           <div
+             class="flex flex-wrap  justify-start gap-2"
+             ng-init="degreiesp2=['Extensive range of undergraduate and graduate programs including arts','sciences','engineering','law']"
+           >
+             <div
+               class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+               ng-repeat="degree in degreiesp2"
+             >{{degree}}</div>
+           </div>
+           <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+             <i class="fa-solid fa-location-dot"></i> Stanford, California, USA
+           </p>
+         </div>
+       </div>
+         <!--  -->
+         <div
+         class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative"
+       >
+         <img
+           class="w-full h-[250px] rounded-t-lg"
+           src="https://www.gpsmycity.com/img/gd_cover/3568.jpg"
+           alt=""
+         />
+         <div class="p-5">
+           <p
+             class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1"
+           >
+           Louise Richardson
+           </p>
+           <h5
+             class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+           >
+           Oxford, England, UK
+           </h5>
+           <div
+             class="flex flex-wrap  justify-start gap-2"
+             ng-init="degreiesp3=['arts','sciences','social sciences','humanities','law','medicine']"
+           >
+             <div
+               class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+               ng-repeat="degree in degreiesp3"
+             >{{degree}}</div>
+           </div>
+           <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+             <i class="fa-solid fa-location-dot"></i>  Oxford, England, UK
+           </p>
+         </div>
+       </div>
+         <!--  -->
+         <div
+         class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative"
+       >
+         <img
+           class="w-full h-[250px] rounded-t-lg"
+           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNOJFS13KKVwApVoXUsT5ECQhDX3MMmo3nyKWrp-luvA&s"
+           alt=""
+         />
+         <div class="p-5">
+           <p
+             class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1"
+           >
+           Marvin Chun
+           </p>
+           <h5
+             class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+           >
+           Yale University
+           </h5>
+           <div
+             class="flex flex-wrap  justify-start gap-2"
+             ng-init="degreiesp4=['arts','sciences','engineering','business','law','medicine']"
+           >
+             <div
+               class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+               ng-repeat="degree in degreiesp4"
+             >{{degree}}</div>
+           </div>
+           <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+             <i class="fa-solid fa-location-dot"></i> New Haven, Connecticut, USA
+           </p>
+         </div>
+       </div>
+         <!--  -->
+        </div>
+<!-- Semi-Private Universities -->
+<div class="w-full flex flex-wrap justify-around items-center" ng-switch-when="semi">
+  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+    <img class="w-full h-[250px] rounded-t-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdpJmO0tap_7w3Whxafysj5_FkaodHQRSibzqHw_jXaQ&s" alt="University Image" />
+    <div class="p-5">
+      <p class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1">
+        Ralf Dahrendorf
+      </p>
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">New York University</h5>
+      <div class="flex flex-wrap justify-start gap-2">
+        <div
+             class="flex flex-wrap  justify-start gap-2"
+             ng-init="degreiess1=['arts','sciences','engineering','business','law','medicine']"
+           >
+             <div
+               class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+               ng-repeat="degree in degreiess1"
+             >{{degree}}</div>
+           </div>
+      <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+        <i class="fa-solid fa-location-dot"></i> New York City, New York, USA
+      </p>
+    </div>
+  </div>
+
+</div>
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+  <img class="w-full h-[250px] rounded-t-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdpJmO0tap_7w3Whxafysj5_FkaodHQRSibzqHw_jXaQ&s" alt="University Image" />
+  <div class="p-5">
+    <p class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1">
+      Ralf Dahrendorf
+    </p>
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Carnegie Mellon University</h5>
+    <div class="flex flex-wrap justify-start gap-2">
+      <div
+           class="flex flex-wrap  justify-start gap-2"
+           ng-init="degreiess2=['arts','sciences','engineering','business','law','medicine']"
+         >
+           <div
+             class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+             ng-repeat="degree in degreiess2"
+           >{{degree}}</div>
+         </div>
+    <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+      <i class="fa-solid fa-location-dot"></i>Pittsburgh, Pennsylvania, USA
+    </p>
+  </div>
+</div>
+
+</div>
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+  <img class="w-full h-[250px] rounded-t-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Ur7qx37ilVg84ebEnR87JHoZhgtybwAtU3mTpt_XjA&s" alt="University Image" />
+  <div class="p-5">
+    <p class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1">
+      Valerie Ashby
+    </p>
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Duke University</h5>
+    <div class="flex flex-wrap justify-start gap-2">
+      <div
+           class="flex flex-wrap  justify-start gap-2"
+           ng-init="degreiess3=['arts','sciences','engineering','business','law','medicine']"
+         >
+           <div
+             class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+             ng-repeat="degree in degreiess3"
+           >{{degree}}</div>
+         </div>
+    <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+      <i class="fa-solid fa-location-dot"></i> Durham, North Carolina, USA
+    </p>
+  </div>
+</div>
+
+</div>
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+  <img class="w-full h-[250px] rounded-t-lg" src="https://facts.net/wp-content/uploads/2023/09/15-captivating-facts-about-peking-university-1695573947.jpg" alt="University Image" />
+  <div class="p-5">
+    <p class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1">
+      Qiu Yong
+    </p>
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Peking University</h5>
+    <div class="flex flex-wrap justify-start gap-2">
+      <div
+           class="flex flex-wrap  justify-start gap-2"
+           ng-init="degreiess3=['arts','sciences','engineering','business','law','medicine']"
+         >
+           <div
+             class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+             ng-repeat="degree in degreiess3"
+           >{{degree}}</div>
+         </div>
+    <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+      <i class="fa-solid fa-location-dot"></i> Beijing, China
+    </p>
+  </div>
+</div>
+
+</div>
+
+</div>
+<!-- government Universities -->
+<div class="w-full flex flex-wrap justify-around items-center" ng-switch-when="Government">
+  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+    <img class="w-full h-[250px] rounded-t-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwEmF_M_6ndrqGK-rosOS6hijAbTrjkj677C3e8nXXIA&s" alt="University Image" />
+    <div class="p-5">
+      <p class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1">
+        Tsu-Jae King Liu
+      </p>
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> University of California, Berkeley</h5>
+      <div class="flex flex-wrap justify-start gap-2">
+        <div
+             class="flex flex-wrap  justify-start gap-2"
+             ng-init="degreiesg1=['arts','sciences','engineering','business','law','public health']"
+           >
+             <div
+               class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+               ng-repeat="degree in degreiesg1"
+             >{{degree}}</div>
+           </div>
+      <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+        <i class="fa-solid fa-location-dot"></i> Berkeley, California, USA
+
+      </p>
+    </div>
+  </div>
+
+</div>
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+  <img class="w-full h-[250px] rounded-t-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS13pi1S1sG7DCzlScBvH5NxD_ZuJbrx4xwgaB3LE14w&s" alt="University Image" />
+  <div class="p-5">
+    <p class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1">
+      Makoto Gonokami
+    </p>
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">University of Tokyo</h5>
+    <div class="flex flex-wrap justify-start gap-2">
+      <div
+           class="flex flex-wrap  justify-start gap-2"
+           ng-init="degreiess2=['arts','sciences','engineering','medicine','law','humanities']"
+         >
+           <div
+             class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+             ng-repeat="degree in degreiess2"
+           >{{degree}}</div>
+         </div>
+    <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+      <i class="fa-solid fa-location-dot"></i> Tokyo, Japan
+    </p>
+  </div>
+</div>
+
+</div>
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+  <img class="w-full h-[250px] rounded-t-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8owZkQHL8YQJFsYc9RyUBk33AM3zI0BMk94jBRzVppg&s" alt="University Image" />
+  <div class="p-5">
+    <p class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1">
+      Stephen Garton
+    </p>
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">University of Sydney</h5>
+    <div class="flex flex-wrap justify-start gap-2">
+      <div
+           class="flex flex-wrap  justify-start gap-2"
+           ng-init="degreiesg3=['arts','sciences','engineering','business','law','medicine']"
+         >
+           <div
+             class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+             ng-repeat="degree in degreiesg3"
+           >{{degree}}</div>
+         </div>
+    <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+      <i class="fa-solid fa-location-dot"></i>  Sydney, New South Wales, Australia
+    </p>
+  </div>
+</div>
+
+</div>
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+  <img class="w-full h-[250px] rounded-t-lg" src="https://educationontario.com/app/uploads/2022/03/University-College_ccexpress.jpeg" alt="University Image" />
+  <div class="p-5">
+    <p class="absolute top-2 right-2 bg-gray-500 text-white font-semibold text-sm rounded-md px-3 py-1">
+      Melanie Woodin
+    </p>
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">University of Toronto</h5>
+    <div class="flex flex-wrap justify-start gap-2">
+      <div
+           class="flex flex-wrap  justify-start gap-2"
+           ng-init="degreiesg4=['arts','sciences','engineering','business','law','medicine']"
+         >
+           <div
+             class="bg-gray-500 text-sm font-semibold text-white py-1 px-1 rounded-md"
+             ng-repeat="degree in degreiesg4"
+           >{{degree}}</div>
+         </div>
+    <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+      <i class="fa-solid fa-location-dot"></i> Toronto, Ontario, Canada
+    </p>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- defalt -->
+<div class="flex justify-center items-center" ng-switch-default="">
+  <div
+    class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+    role="alert"
+  >
+    <span class="font-medium">please select the city you want</span>
+  </div>
+</div>
+  </body>
+</html>
