@@ -15,6 +15,15 @@
 
     <div class="container text-center m-4" ng-app="myApp" ng-controller="ctrl_one">
 
+        <div ng-controller="timeOuts">
+            <marquee behavior="" direction=""> {{message}} </marquee>
+            <marquee> {{message2}} </marquee>
+    </div>
+        <h3 ng-controller="time_ctrl">Current Time: {{ myTime }}</h3>
+        <div>
+
+        </div>
+
         <p>Enter your Gold weight in Tola</p>
         <input type="number" ng-model="gold"> <br>
         <br>
@@ -25,7 +34,7 @@
         <input type="number" ng-model="assets"> <br>
         <br>
         <button class="btn btn-warning text-white w-25" ng-click="zakat()">Your Zakat</button>
-        
+
         <table class="table table-bordered border-dark mt-4">
             <tr>
                 <td>Gold Price:</td>

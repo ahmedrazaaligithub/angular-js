@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div ng-app="quizApp" ng-controller="myQuiz" class="container mx-auto py-8">
+
+        <div ng-repeat="question in questions" class="mb-6">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <p class="text-lg font-semibold">{{question.question}}</p>
+                <div class="mt-4">
+                    <div ng-repeat="option in question.options" class="flex items-center mb-2">
+                        <input type="radio" name="quiz{{question.id}}" id="{{option}}" value="{{option}}" class="mr-2"
+                            ng-click="isCorrect(this,question.id)">
+                        <label for="{{option}}" class="text-gray-800">{{option}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button ng-disabled="isdisable" type="button">click</button>
+
+    </div>
+</body>
+
+</html>

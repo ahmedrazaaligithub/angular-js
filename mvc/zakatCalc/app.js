@@ -1,7 +1,15 @@
 var zakat = angular.module("myApp", [])
 
-zakat.controller("ctrl_one", function($scope){
+zakat.controller("time_ctrl", function($scope,$interval){
+    $scope.myTime = new Date().toLocaleTimeString();
+    
+    $interval(function(){
 
+        $scope.myTime = new Date().toLocaleTimeString();
+
+    }, 1000);
+        });
+    zakat.controller("ctrl_one", function($scope,$interval){
     $scope.zakat = function(){
         if($scope.gold >= 7){
             $scope.goldPrice = $scope.gold * 240500;
@@ -29,5 +37,17 @@ zakat.controller("ctrl_one", function($scope){
 
         $scope.totalZakat = $scope.goldZakat + $scope.silverZakat + $scope.assetsZakat
     }
+    
+})
+zakat.controller("timeOuts",function($scope,$timeout){
+    $scope.message ="gold rate"
+   $timeout(function(){
+       $scope.message = 'Today gold rate is 24500'
+   }, 5000);
+   $scope.message2 ="silver rate"
+   $timeout(function(){
+    $scope.message2 = 'Today silver rate is 3270'
+}, 10000);
 
 })
+
