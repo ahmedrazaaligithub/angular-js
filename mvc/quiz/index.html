@@ -12,7 +12,6 @@
 
 <body class="bg-gray-100">
     <div ng-app="quizApp" ng-controller="myQuiz" class="container mx-auto py-8">
-
         <div ng-repeat="question in questions" class="mb-6">
             <div class="bg-white p-6 rounded-lg shadow">
                 <p class="text-lg font-semibold">{{question.question}}</p>
@@ -25,8 +24,24 @@
                 </div>
             </div>
         </div>
-        <button ng-disabled="isdisable" type="button">click</button>
+        <!-- <button ng-disabled="isdisable" type="button">click</button> -->
+        <button type="button"
+        ng-disabled="isdisable"
+        ng-click="showResult()"
+            class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+            click</button>
+<p id="result"></p>
 
+<div class="mt-8">
+    <p class="text-xl ">Wrong Answers</p>
+    <div class="mt-4">
+        <div ng-repeat="x in wrongans" class="bg-white p-4 rounded-lg shadow mb-4">
+            <p class="text-lg font-semibold mb-2">Question {{x + 1}}</p>
+            <!-- Add any additional information or styling for each wrong answer if needed -->
+        </div>
+    </div>
+</div>
+        </div>
     </div>
 </body>
 
